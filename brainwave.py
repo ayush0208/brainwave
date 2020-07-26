@@ -97,12 +97,6 @@ loaded_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc
 score = loaded_model.evaluate(x_valid,y_valid, verbose=0)
 print("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
 
-#    41414092616802021212818706161631313083132  -->  i want a cup of tea        test1.txt
-#    841431309313284143137171704141471717170616414142121231308616163291919  - the weather is nice today  test2.txt
-#  4141405151541414515313086 1 6160751515291919 - i like to play      test3.txt
-#   515156161681818313086161603261621212313 - love to dance       test4.txt
-#   691919041461616212212919190414147171717086161607171731323021261616616165157171717 - my hobby is to read books test5.txt
-
 testfile = open("test1.txt")
 test_data, test_label = Load_data(testfile,"MindWave",data_size=41)
 print(test_data.shape)
